@@ -101,16 +101,50 @@ function getDataQnaListAll(){
 |job_dt|작성일시|String|
 |finish_yn|채택여부|int|
 |reply_count|답변수|int|
-|fileList|첨부 파일 목록| |
-|ata_org_name|파일 크기 | |
-| |파일 크기| |
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
+|**fileList**|**첨부 파일 목록**| |
+|ata_org_name|파일 이름|String|
+|ata_size|파일 크기|int|
+|ata_path|다운로드 주소|String|
+|**replyList**|**답변 순번 목록**| |
+|reply_idx|답변 순번|int|
+|content_reply|답변 내용|String|
+|job_dt|답변 작성 일시|String|
+|selected|채택 유무|String|
+|usernm|답변 장성자|String|
+|user_gubun_name|답변자 구분|String|
+|**replyFileList**|**답변 첨부 파일 목록**| |
+|rata_org_name|파일 이름|String|
+|rata_size|파일 크기|int|
+|rata_path|다운로드 주소|String|
+|message|결과 안내문|String|
+|result|결과 코드|int |
 
+&nbsp; &nbsp;
+### Jquery 코드 샘플
+```javascript 
+function getDataQnaReply(){
+    var search ={
+        user_token:"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.
+        eyJ1c2Vybm8iOjg1LCJ1c2VyaWQiOiJkbXRlazEwNiIsImlhdCI6MTY3MDk4MjY0MSwiZXhwIjoxNjc4NzU4NjQxfQ.
+        iWSLtvLgUFAw8ODaDDURcILvOqJEYnx5kjOd6AZhTg8",
+        qna_idx: 34
+    }
+    $.ajax({
+        url: "http://info.oliveware.co.kr:8080/project9/getDataQnaReply",
+        type: "GET",
+        async: false,
+        crossDomain: true,
+        daraType: "json",
+        contentType: "text/plain",
+        mimeType: "text/plain",
+        data: search,
+        success:function(response){
+            console.log(response)            
+        }
+    });
+}
+
+```
 
 &nbsp; &nbsp; 
 &nbsp; &nbsp; 
