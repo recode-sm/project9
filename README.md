@@ -123,7 +123,7 @@
 ### Response
 &nbsp; &nbsp; 
 
-# 경험지식 – 답변 삭제
+## 경험지식 – 답변 삭제
 
 ### Request
 
@@ -138,7 +138,7 @@
 ### Response
 &nbsp; &nbsp; 
 
-# 경험지식 – 나의 경험 지식 리스트 조회
+## 경험지식 – 나의 경험 지식 리스트 조회
 
 ### Request
 
@@ -148,6 +148,53 @@
 |이름|데이터명|유형|필수여부|
 |------|---|---|:---:|
 |user_token|String|외부 사용자 인증키|O|
+
+### Response
+&nbsp; &nbsp; 
+
+## 경험지식 – 고객센터 글 등록
+
+### Request
+
+`GET http://117.52.144.113:8080/project9/insertDataHelp`
+
+### Parameters
+|이름|데이터명|유형|필수여부|
+|------|---|---|:---:|
+|user_token|String|외부 사용자 인증키|O|
+|brdtitle|String|글 제목|O|
+|brdmemo|String|글 내용|O|
+
+### Response
+&nbsp; &nbsp; 
+
+## 경험지식 – 고객센터 리스트 조회
+
+### Request
+
+`GET http://117.52.144.113:8080/project9/getDataHelpList`
+
+### Parameters
+|이름|데이터명|유형|필수여부|
+|------|---|---|:---:|
+|user_token|String|외부 사용자 인증키|O|
+|page|int|페이지 번호| |
+|keyword|String|검색어| |
+
+### Response
+&nbsp; &nbsp; 
+
+## 경험지식 – 고객센터 글 상세 조회
+
+### Request
+
+`GET http://117.52.144.113:8080/project9/getDataHelpOne`
+
+### Parameters
+|이름|데이터명|유형|필수여부|
+|------|---|---|:---:|
+|user_token|String|외부 사용자 인증키|O|
+|brdno|String|글 번호|O|
 
 ### Response
 &nbsp; &nbsp; 
