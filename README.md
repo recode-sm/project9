@@ -9,6 +9,7 @@
 
 `GET http://117.52.144.113:8080/project9/getDataQnaListAll`
 
+&nbsp; &nbsp;
 ### Parameters
 |이름|데이터명|유형|필수여부|
 |------|---|---|:---:|
@@ -19,6 +20,7 @@
 |broken_sh|String|고장 상황| |
 |broken_hs|String|고장 현상| |
 
+&nbsp; &nbsp;
 ### Response
 |이름|데이터명|유형|
 |------|---|---|
@@ -34,6 +36,38 @@
 |job_dt|작성일시|String|
 |finish_yn|채택여부|int|
 |reply_count|답변수|int|
+
+
+&nbsp; &nbsp;
+### Jquery 코드 샘플
+```javascript 
+function getDataQnaListAll(){
+    var search ={
+        user_token:" eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.
+        eyJ1c2Vybm8iOjg1LCJ1c2VyaWQiOiJkbXRlazEwNiIsImlhdCI6MTY3MDk4MjY0MSwiZXhwIjoxNjc4NzU4NjQxfQ.
+        iWSLtvLgUFAw8ODaDDURcILvOqJEYnx5kjOd6AZhTg8",
+        keyword: '',
+        industry_gubun: '',
+        process_gubun: '',
+        broken_sh: '',
+        broken_hs: ''
+    }
+    $.ajax({
+        url: "http://117.52.144.113:8080/project9/getDataQnaListAll",
+        type: "GET",
+        async: false,
+        crossDomain: true,
+        daraType: "json",
+        contentType: "text/plain",
+        mimeType: "text/plain",
+        data: search,
+        success:function(response){
+            console.log(response)
+        }
+    });
+}
+```
+
 
 &nbsp; &nbsp; 
 &nbsp; &nbsp;       
