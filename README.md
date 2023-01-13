@@ -1,39 +1,19 @@
-# REST API example application
-
-This is a bare-bones example of a Sinatra application providing a REST
-API to a DataMapper-backed model.
-
-The entire application is contained within the `app.rb` file.
-
-`config.ru` is a minimal Rack configuration for unicorn.
-
-`run-tests.sh` runs a simplistic test and generates the API
-documentation below.
-
-It uses `run-curl-tests.rb` which runs each command defined in
-`commands.yml`.
-
-## Install
-
-    bundle install
-
-## Run the app
-
-    unicorn -p 7000
-
-## Run the tests
-
-    ./run-tests.sh
+# 설비 보전 경험 지식 공유 플랫폼
+&nbsp; &nbsp; 
+&nbsp; &nbsp; 
+&nbsp; &nbsp; 
 
 # REST API
 
 The REST API to the example app is described below.
 
-## Get list of Things
+## 경험지식 요청 리스트 전체 조회
 
 ### Request
 
-`GET /thing/`
+`GET http://117.52.144.113:8080/project9/getDataQnaListAll`
+
+#### Parameters
 
     curl -i -H 'Accept: application/json' http://localhost:7000/thing/
 
