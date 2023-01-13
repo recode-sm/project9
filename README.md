@@ -148,6 +148,7 @@
 |이름|데이터명|유형|필수여부|
 |------|---|---|:---:|
 |user_token|String|외부 사용자 인증키|O|
+|page|int|페이지 번호| |
 
 ### Response
 &nbsp; &nbsp; 
