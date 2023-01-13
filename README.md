@@ -9,7 +9,7 @@
 
 `GET http://117.52.144.113:8080/project9/getDataQnaListAll`
 
-#### Parameters
+### Parameters
 |이름|데이터명|유형|필수여부|
 |------|---|---|:---:|
 |user_token|String|외부 사용자 인증키|O|
@@ -20,8 +20,23 @@
 |broken_hs|String|고장 현상| |
 
 ### Response
+|이름|데이터명|유형|
+|------|---|---|
+|qna_list|요청글 목록| |
+|qna_idx|요청글 순번|int|
+|usernm|작성자|String|
+|industry_gubun_name|산업군|String|
+|process_gubun_name|상세공정|String|
+|broken_sh_name|고장상황|String|
+|broken_hs_name|고장현상|String|
+|title|제목|String|
+|content|내용|String|
+|job_dt|작성일시|String|
+|finish_yn|채택여부|int|
+|reply_count|답변수|int|
+
 &nbsp; &nbsp; 
-       
+&nbsp; &nbsp;       
 ## 경험지식 요청 글 상세 조회
 
 ### Request
