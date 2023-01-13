@@ -89,3 +89,65 @@
 ### Response
 &nbsp; &nbsp; 
 
+## 경험지식 – 답변 등록
+
+### Request
+
+`POST http://117.52.144.113:8080/project9/insertDataReply_attach`
+
+### Parameters
+|이름|데이터명|유형|필수여부|
+|------|---|---|:---:|
+|user_token|String|외부 사용자 인증키|O|
+|qna_idx|String|요청글 번호|O|
+|content_reply|String|답변 내용|O|
+|reply_attach|File|첨부파일| |
+
+### Response
+&nbsp; &nbsp; 
+
+## 경험지식 – 답변 수정
+
+### Request
+
+`GET http://117.52.144.113:8080/project9/updateDataReply`
+
+### Parameters
+|이름|데이터명|유형|필수여부|
+|------|---|---|:---:|
+|user_token|String|외부 사용자 인증키|O|
+|reply_idx|String|답변 번호|O|
+|content_reply|String|답변 내용|O|
+
+
+### Response
+&nbsp; &nbsp; 
+
+# 경험지식 – 답변 삭제
+
+### Request
+
+`GET http://117.52.144.113:8080/project9/deleteDataReply`
+
+### Parameters
+|이름|데이터명|유형|필수여부|
+|------|---|---|:---:|
+|user_token|String|외부 사용자 인증키|O|
+|reply_idx|String|답변 번호|O|
+
+### Response
+&nbsp; &nbsp; 
+
+# 경험지식 – 나의 경험 지식 리스트 조회
+
+### Request
+
+`GET http://117.52.144.113:8080/project9/getMyDataQnaList`
+
+### Parameters
+|이름|데이터명|유형|필수여부|
+|------|---|---|:---:|
+|user_token|String|외부 사용자 인증키|O|
+
+### Response
+&nbsp; &nbsp; 
