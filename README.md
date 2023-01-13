@@ -7,7 +7,7 @@
 
 ### Request
 
-`GET https://info.oliveware.co.kr:8080/project9/getDataQnaListAll`
+`GET https://{domain}/project9/getDataQnaListAll`
 
 &nbsp; &nbsp;
 ### Parameters
@@ -53,7 +53,7 @@ function getDataQnaListAll(){
         broken_hs: ''
     }
     $.ajax({
-        url: "http://info.oliveware.co.kr:8080/project9/getDataQnaListAll",
+        url: "https://{domain}/project9/getDataQnaListAll",
         type: "GET",
         async: false,
         crossDomain: true,
@@ -75,7 +75,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://info.oliveware.co.kr:8080/project9/getDataQnaReply`
+`GET https://{domain}/project9/getDataQnaReply`
 
 &nbsp; &nbsp;
 ### Parameters
@@ -130,7 +130,7 @@ function getDataQnaReply(){
         qna_idx: 34
     }
     $.ajax({
-        url: "http://info.oliveware.co.kr:8080/project9/getDataQnaReply",
+        url: "https://{domain}/project9/getDataQnaReply",
         type: "GET",
         async: false,
         crossDomain: true,
@@ -151,7 +151,7 @@ function getDataQnaReply(){
 
 ### Request
 
-`POST http://info.oliveware.co.kr:8080/project9/insertDataQna_attach`
+`POST https://{domain}/project9/insertDataQna_attach`
 
 &nbsp; &nbsp;
 ### Parameters
@@ -184,7 +184,7 @@ function getDataQnaReply(){
 function insertDataQna_attach(){
     var f = new FormData($('#form1')[0]);
     $.ajax({
-        url: "http://info.oliveware.co.kr:8080/project9/insertDataQna_attach",
+        url: "https://{domain}/project9/insertDataQna_attach",
         type: "post",
         enctype: 'multipart/form-data',
         async: false,
@@ -237,7 +237,7 @@ function insertDataQna_attach(){
 
 ### Request
 
-`GET http://info.oliveware.co.kr:8080/project9/updateMyQna`
+`GET https://{domain}/project9/updateMyQna`
 
 &nbsp; &nbsp;
 ### Parameters
@@ -288,7 +288,7 @@ function updateMyQna(){
         content: ' 바닥이 지저분해요'
     }
     $.ajax({
-        url: "http://info.oliveware.co.kr:8080/project9/updateMyQna",
+        url: "https://{domain}/project9/updateMyQna",
         type: "GET",
         async: false,
         crossDomain: true,
@@ -309,7 +309,7 @@ function updateMyQna(){
 
 ### Request
 
-`POST http://info.oliveware.co.kr:8080/project9/insertDataReply_attach`
+`POST https://{domain}/project9/insertDataReply_attach`
 
 &nbsp; &nbsp;
 ### Parameters
@@ -333,7 +333,7 @@ function updateMyQna(){
 function insertDataReply_attach(){
     var f = new FormData($('#form2')[0]);
     $.ajax({
-        url: "http://info.oliveware.co.kr:8080/project9/insertDataReply_attach",
+        url: "https://{domain}/project9/insertDataReply_attach",
         type: "POST",
         enctype: 'multipart/form-data',
         async: false,
@@ -368,7 +368,7 @@ function insertDataReply_attach(){
 
 ### Request
 
-`GET http://info.oliveware.co.kr:8080/project9/updateDataReply`
+`GET https://{domain}/project9/updateDataReply`
 
 &nbsp; &nbsp; 
 ### Parameters
@@ -397,7 +397,7 @@ function updateDataReply(){
         content_reply: '수정 내용'
     }
     $.ajax({
-        url: "http://info.oliveware.co.kr:8080/project9/updateDataReply",
+        url: "https://{domain}/project9/updateDataReply",
         type: "GET",
         async: false,
         crossDomain: true,
@@ -418,7 +418,7 @@ function updateDataReply(){
 
 ### Request
 
-`GET http://info.oliveware.co.kr:8080/project9/deleteDataReply`
+`GET https://{domain}/project9/deleteDataReply`
 
 &nbsp; &nbsp;
 ### Parameters
@@ -445,7 +445,7 @@ function deleteDataReply(){
         reply_idx: 60
     }
     $.ajax({
-        url: "http://info.oliveware.co.kr:8080/project9/deleteDataReply",
+        url: "https://{domain}/project9/deleteDataReply",
         type: "GET",
         async: false,
         crossDomain: true,
@@ -466,7 +466,7 @@ function deleteDataReply(){
 
 ### Request
 
-`GET http://info.oliveware.co.kr:8080/project9/getMyDataQnaList`
+`GET https://{domain}/project9/getMyDataQnaList`
 
 &nbsp; &nbsp; 
 ### Parameters
@@ -507,7 +507,7 @@ function getMyDataQnaList(){
         page: ''
     }
     $.ajax({
-        url: "http://info.oliveware.co.kr:8080/project9/getMyDataQnaList",
+        url: "https://{domain}/project9/getMyDataQnaList",
         type: "GET",
         async: false,
         crossDomain: true,
@@ -529,7 +529,7 @@ function getMyDataQnaList(){
 
 ### Request
 
-`GET http://info.oliveware.co.kr:8080/project9/insertDataHelp`
+`GET https://{domain}/project9/insertDataHelp`
 
 &nbsp; &nbsp;
 ### Parameters
@@ -558,7 +558,7 @@ function insertDataHelp(){
         brdmemo: '문의 내용'        
     }
     $.ajax({
-        url: "http://info.oliveware.co.kr:8080/project9/insertDataHelp",
+        url: "https://{domain}/project9/insertDataHelp",
         type: "GET",
         async: false,
         crossDomain: true,
@@ -579,7 +579,7 @@ function insertDataHelp(){
 
 ### Request
 
-`GET http://info.oliveware.co.kr:8080/project9/getDataHelpList`
+`GET https://{domain}/project9/getDataHelpList`
 
 &nbsp; &nbsp;
 ### Parameters
@@ -617,7 +617,7 @@ function getDataHelpList(){
         keyword:''
     }
     $.ajax({
-        url: "http://info.oliveware.co.kr:8080/project9/getDataHelpList",
+        url: "https://{domain}/project9/getDataHelpList",
         type: "GET",
         async: false,
         crossDomain: true,
@@ -638,7 +638,7 @@ function getDataHelpList(){
 
 ### Request
 
-`GET http://info.oliveware.co.kr:8080/project9/getDataHelpOne`
+`GET https://{domain}/project9/getDataHelpOne`
 
 &nbsp; &nbsp;
 ### Parameters
@@ -674,7 +674,7 @@ function getDataHelpOne(){
         brdno: '47'
     }
     $.ajax({
-        url: "http://info.oliveware.co.kr:8080/project9/getDataHelpOne",
+        url: "https://{domain}/project9/getDataHelpOne",
         type: "GET",
         async: false,
         crossDomain: true,
