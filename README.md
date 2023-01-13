@@ -7,7 +7,7 @@
 
 ### Request
 
-`GET http://117.52.144.113:8080/project9/getDataQnaListAll`
+`GET https://info.oliveware.co.kr/project9/getDataQnaListAll`
 
 &nbsp; &nbsp;
 ### Parameters
@@ -53,7 +53,7 @@ function getDataQnaListAll(){
         broken_hs: ''
     }
     $.ajax({
-        url: "http://117.52.144.113:8080/project9/getDataQnaListAll",
+        url: "http://info.oliveware.co.kr/project9/getDataQnaListAll",
         type: "GET",
         async: false,
         crossDomain: true,
@@ -75,7 +75,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://117.52.144.113:8080/project9/getDataQnaReply`
+`GET http://info.oliveware.co.kr/project9/getDataQnaReply`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -90,7 +90,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`POST http://117.52.144.113:8080/project9/insertDataQna_attach`
+`POST http://info.oliveware.co.kr/project9/insertDataQna_attach`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -116,7 +116,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://117.52.144.113:8080/project9/updateMyQna`
+`GET http://info.oliveware.co.kr/project9/updateMyQna`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -142,7 +142,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`POST http://117.52.144.113:8080/project9/insertDataReply_attach`
+`POST http://info.oliveware.co.kr/project9/insertDataReply_attach`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -159,7 +159,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://117.52.144.113:8080/project9/updateDataReply`
+`GET http://info.oliveware.co.kr/project9/updateDataReply`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -176,7 +176,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://117.52.144.113:8080/project9/deleteDataReply`
+`GET http://info.oliveware.co.kr/project9/deleteDataReply`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -191,7 +191,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://117.52.144.113:8080/project9/getMyDataQnaList`
+`GET http://info.oliveware.co.kr/project9/getMyDataQnaList`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -206,7 +206,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://117.52.144.113:8080/project9/insertDataHelp`
+`GET http://info.oliveware.co.kr/project9/insertDataHelp`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -222,7 +222,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://117.52.144.113:8080/project9/getDataHelpList`
+`GET http://info.oliveware.co.kr/project9/getDataHelpList`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -238,7 +238,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://117.52.144.113:8080/project9/getDataHelpOne`
+`GET http://info.oliveware.co.kr/project9/getDataHelpOne`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
