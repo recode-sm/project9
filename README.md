@@ -143,7 +143,6 @@ function getDataQnaReply(){
         }
     });
 }
-
 ```
 
 &nbsp; &nbsp; 
@@ -240,6 +239,7 @@ function insertDataQna_attach(){
 
 `GET http://info.oliveware.co.kr:8080/project9/updateMyQna`
 
+&nbsp; &nbsp;
 ### Parameters
 |이름|데이터명|유형|필수여부|
 |------|---|---|:---:|
@@ -311,6 +311,7 @@ function updateMyQna(){
 
 `POST http://info.oliveware.co.kr:8080/project9/insertDataReply_attach`
 
+&nbsp; &nbsp;
 ### Parameters
 |이름|데이터명|유형|필수여부|
 |------|---|---|:---:|
@@ -319,15 +320,57 @@ function updateMyQna(){
 |content_reply|String|답변 내용|O|
 |reply_attach|File|첨부파일| |
 
+&nbsp; &nbsp;
 ### Response
-&nbsp; &nbsp; 
+|이름|데이터명|유형|
+|------|---|---|
+|message|결과 안내문|String|
+|result|결과 코드|int|
 
+&nbsp; &nbsp;
+### Jquery 코드 샘플
+```javascript 
+function insertDataReply_attach(){
+    var f = new FormData($('#form2')[0]);
+    $.ajax({
+        url: "http://info.oliveware.co.kr:8080/project9/insertDataReply_attach",
+        type: "POST",
+        enctype: 'multipart/form-data',
+        async: false,
+        crossDomain: true,
+        daraType: "json",
+        processData: false,
+        contentType: false,
+        data: f,
+        success:function(response){
+            console.log(response)
+        }
+    });
+}
+
+<form id="form2" name="form2" method="post" enctype="multipart/form-data">
+<label>사용자 토큰</label>   
+    <input type="text" name="user_token" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.
+    eyJ1c2Vybm8iOjg1LCJ1c2VyaWQiOiJkbXRlazEwNiIsImlhdCI6MTY3MDk4MjY0MSwiZXhwIjoxNjc4NzU4NjQxfQ.
+    iWSLtvLgUFAw8ODaDDURcILvOqJEYnx5kjOd6AZhTg8"><br>
+    <label>요청글 순번</label>
+    <input type="text" name="qna_idx" value="73"><br>
+    <label>내용</label>
+    <textarea name="content_reply"></textarea><br>
+    <label>첨부파일</label>
+    <input type="file" name="reply_attach" multiple>
+</form>
+```
+
+&nbsp; &nbsp; 
+&nbsp; &nbsp; 
 ## 경험지식 – 답변 수정
 
 ### Request
 
 `GET http://info.oliveware.co.kr:8080/project9/updateDataReply`
 
+&nbsp; &nbsp; 
 ### Parameters
 |이름|데이터명|유형|필수여부|
 |------|---|---|:---:|
@@ -335,10 +378,42 @@ function updateMyQna(){
 |reply_idx|String|답변 번호|O|
 |content_reply|String|답변 내용|O|
 
-
+&nbsp; &nbsp;
 ### Response
-&nbsp; &nbsp; 
+|이름|데이터명|유형|
+|------|---|---|
+|message|결과 안내문|String|
+|result|결과 코드|int|
 
+&nbsp; &nbsp;
+### Jquery 코드 샘플
+```javascript 
+function updateDataReply(){
+    var search ={
+        user_token:"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.
+        eyJ1c2Vybm8iOjg1LCJ1c2VyaWQiOiJkbXRlazEwNiIsImlhdCI6MTY3MDk4MjY0MSwiZXhwIjoxNjc4NzU4NjQxfQ.
+        iWSLtvLgUFAw8ODaDDURcILvOqJEYnx5kjOd6AZhTg8",
+        reply_idx: 59,
+        content_reply: '수정 내용'
+    }
+    $.ajax({
+        url: "http://117.52.144.113:8080/project9/updateDataReply",
+        type: "GET",
+        async: false,
+        crossDomain: true,
+        daraType: "json",
+        contentType: "text/plain",
+        mimeType: "text/plain",
+        data: search,
+        success:function(response){
+            console.log(response)
+        }
+    });
+}
+```
+
+&nbsp; &nbsp; 
+&nbsp; &nbsp; 
 ## 경험지식 – 답변 삭제
 
 ### Request
