@@ -154,6 +154,7 @@ function getDataQnaReply(){
 
 `POST http://info.oliveware.co.kr:8080/project9/insertDataQna_attach`
 
+&nbsp; &nbsp;
 ### Parameters
 |이름|데이터명|유형|필수여부|
 |------|---|---|:---:|
@@ -171,9 +172,68 @@ function getDataQnaReply(){
 |content|String|내용|O|
 |qna_attach|File|첨부파일| |
 
+&nbsp; &nbsp;
 ### Response
-&nbsp; &nbsp; 
+|이름|데이터명|유형|
+|------|---|---|
+|message|결과 안내문|String|
+|result|결과 코드|int|
 
+&nbsp; &nbsp;
+### Jquery 코드 샘플
+```javascript 
+function insertDataQna_attach(){
+    var f = new FormData($('#form1')[0]);
+    $.ajax({
+        url: "http://117.52.144.113:8080/project9/insertDataQna_attach",
+        type: "post",
+        enctype: 'multipart/form-data',
+        async: false,
+        crossDomain: true,
+        daraType: "json",
+        processData: false,
+        contentType: false,
+        data: f,
+        success:function(response){
+            console.log(response)           
+        }
+    });
+}
+
+<form id="form1" name="form1" method="post" enctype="multipart/form-data">   
+    <label>사용자 토큰</label>   
+    <input type="text" name="user_token" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.
+       eyJ1c2Vybm8iOjg1LCJ1c2VyaWQiOiJkbXRlazEwNiIsImlhdCI6MTY3MDk4MjY0MSwiZXhwIjoxNjc4NzU4NjQxfQ.
+       iWSLtvLgUFAw8ODaDDURcILvOqJEYnx5kjOd6AZhTg8">"><br>
+    <label>산업군</label>
+    <input type="text" name="industry_gubun"><br>
+    <label>상세 공정</label>
+    <input type="text" name="process_gubun"><br>
+    <label>고장 상황</label>
+    <input type="text" name="broken_sh"><br>
+    <label>고장 현상</label>
+    <input type="text" name="broken_hs"><br>
+    <label>모델명</label>
+    <input type="text" name="model"><br>
+    <label>모델 제조사</label>
+    <input type="text" name="model_com"><br>
+    <label>제조 일자</label>
+    <input type="date" name="model_create_dt"><br>
+    <label>설치 일자</label>
+    <input type="date" name="model_install_dt"><br>
+    <label>금형파손여부</label>
+    <input type="text" name="mold_break_yn"><br>
+    <label>제목</label>
+    <input type="text" name="title"><br>
+    <label>내용</label>
+    <textarea name="content"></textarea><br>
+    <label>첨부파일</label>
+    <input type="file" name="qna_attach" multiple>
+</form>
+```
+
+&nbsp; &nbsp; 
+&nbsp; &nbsp;
 ## 경험지식 – 경험 지식 수정
 
 ### Request
@@ -197,9 +257,54 @@ function getDataQnaReply(){
 |title|String|제목|O|
 |content|String|내용|O|
 
+&nbsp; &nbsp;
 ### Response
-&nbsp; &nbsp; 
+|이름|데이터명|유형|
+|------|---|---|
+|message|결과 안내문|String|
+|result|결과 코드|int|
 
+&nbsp; &nbsp;
+### Jquery 코드 샘플
+```javascript 
+function updateMyQna(){
+    var search ={
+        user_token:"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.
+        eyJ1c2Vybm8iOjg1LCJ1c2VyaWQiOiJkbXRlazEwNiIsImlhdCI6MTY3MDk4MjY0MSwiZXhwIjoxNjc4NzU4NjQxfQ.
+        iWSLtvLgUFAw8ODaDDURcILvOqJEYnx5kjOd6AZhTg8",
+        qna_idx: '61',
+        industry_gubun: '1',
+        process_gubun: '2',
+        broken_sh: '3',
+        broken_hs: '1',
+        model: 'ABC',
+        model_com: 'ABC',
+        model_create_dt: '2012-11-11',
+        model_install_dt: '2012-11-11',
+        out_temp: '20',
+        out_hmdt: '30',
+        mold_break_yn: '1',
+        title: '오일받이 누수',
+        content: ' 바닥이 지저분해요'
+    }
+    $.ajax({
+        url: "http://117.52.144.113:8080/project9/updateMyQna",
+        type: "GET",
+        async: false,
+        crossDomain: true,
+        daraType: "json",
+        contentType: "text/plain",
+        mimeType: "text/plain",
+        data: search,
+        success:function(response){
+            console.log(response)           
+        }
+    });
+}
+```
+
+&nbsp; &nbsp; 
+&nbsp; &nbsp; 
 ## 경험지식 – 답변 등록
 
 ### Request
