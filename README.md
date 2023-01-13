@@ -20,6 +20,7 @@
 |broken_hs|String|고장 현상| |
 
 ### Response
+&nbsp; &nbsp; 
        
 ## 경험지식 요청 글 상세 조회
 
@@ -34,6 +35,7 @@
 |qna_idx|String|요청 글 번호|O|
 
 ### Response
+&nbsp; &nbsp; 
 
 ## 경험지식 – 요청 등록
 
@@ -59,3 +61,31 @@
 |qna_attach|File|첨부파일| |
 
 ### Response
+&nbsp; &nbsp; 
+
+## 경험지식 – 경험 지식 수정
+
+### Request
+
+`GET http://117.52.144.113:8080/project9/updateMyQna`
+
+### Parameters
+|이름|데이터명|유형|필수여부|
+|------|---|---|:---:|
+|user_token|String|외부 사용자 인증키|O|
+|qna_idx|int|요청 글 번호|O|
+|industry_gubun|int|산업군| |
+|process_gubun|int|상세 공정|O|
+|model|String|모델명| |
+|model_com|String|모델제조사| |
+|model_create_dt|String|제조일자| |
+|model_install_dt|String|설치일자| |
+|mold_break_yn|String|금형파손여부| |
+|broken_sh|int|고장 상황|O|
+|broken_hs|int|고장 현상| |
+|title|String|제목|O|
+|content|String|내용|O|
+
+### Response
+&nbsp; &nbsp; 
+
