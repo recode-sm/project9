@@ -7,7 +7,7 @@
 
 ### Request
 
-`GET https://info.oliveware.co.kr/project9/getDataQnaListAll`
+`GET https://info.oliveware.co.kr:8080/project9/getDataQnaListAll`
 
 &nbsp; &nbsp;
 ### Parameters
@@ -53,7 +53,7 @@ function getDataQnaListAll(){
         broken_hs: ''
     }
     $.ajax({
-        url: "http://info.oliveware.co.kr/project9/getDataQnaListAll",
+        url: "http://info.oliveware.co.kr:8080/project9/getDataQnaListAll",
         type: "GET",
         async: false,
         crossDomain: true,
@@ -75,22 +75,50 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://info.oliveware.co.kr/project9/getDataQnaReply`
+`GET http://info.oliveware.co.kr:8080/project9/getDataQnaReply`
 
+&nbsp; &nbsp;
 ### Parameters
 |이름|데이터명|유형|필수여부|
 |------|---|---|:---:|
 |user_token|String|외부 사용자 인증키|O|
 |qna_idx|String|요청 글 번호|O|
 
-### Response
 &nbsp; &nbsp; 
+### Response
+|이름|데이터명|유형|
+|------|---|---|
+|industry_gubun_name|산업군|String|
+|process_gubun_name|상세공정|String|
+|model|모델명|String|
+|model_com|모델제조사|String|
+|model_create_dt|제조일자|String|
+|model_install_dt|설치일자|String|
+|broken_sh_name|고장상황|String|
+|broken_hs_name|고장현상|String|
+|title|제목|String|
+|content|내용|String|
+|job_dt|작성일시|String|
+|finish_yn|채택여부|int|
+|reply_count|답변수|int|
+|fileList|첨부 파일 목록| |
+|ata_org_name|파일 크기 | |
+| |파일 크기| |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
 
+
+&nbsp; &nbsp; 
+&nbsp; &nbsp; 
 ## 경험지식 – 요청 등록
 
 ### Request
 
-`POST http://info.oliveware.co.kr/project9/insertDataQna_attach`
+`POST http://info.oliveware.co.kr:8080/project9/insertDataQna_attach`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -116,7 +144,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://info.oliveware.co.kr/project9/updateMyQna`
+`GET http://info.oliveware.co.kr:8080/project9/updateMyQna`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -142,7 +170,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`POST http://info.oliveware.co.kr/project9/insertDataReply_attach`
+`POST http://info.oliveware.co.kr:8080/project9/insertDataReply_attach`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -159,7 +187,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://info.oliveware.co.kr/project9/updateDataReply`
+`GET http://info.oliveware.co.kr:8080/project9/updateDataReply`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -176,7 +204,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://info.oliveware.co.kr/project9/deleteDataReply`
+`GET http://info.oliveware.co.kr:8080/project9/deleteDataReply`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -191,7 +219,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://info.oliveware.co.kr/project9/getMyDataQnaList`
+`GET http://info.oliveware.co.kr:8080/project9/getMyDataQnaList`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -206,7 +234,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://info.oliveware.co.kr/project9/insertDataHelp`
+`GET http://info.oliveware.co.kr:8080/project9/insertDataHelp`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -222,7 +250,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://info.oliveware.co.kr/project9/getDataHelpList`
+`GET http://info.oliveware.co.kr:8080/project9/getDataHelpList`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
@@ -238,7 +266,7 @@ function getDataQnaListAll(){
 
 ### Request
 
-`GET http://info.oliveware.co.kr/project9/getDataHelpOne`
+`GET http://info.oliveware.co.kr:8080/project9/getDataHelpOne`
 
 ### Parameters
 |이름|데이터명|유형|필수여부|
