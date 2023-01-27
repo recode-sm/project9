@@ -727,7 +727,7 @@ function getDataHelpOne(){
 |ata_size|파일 크기|int|
 |ata_path|다운로드 주소|String|
 |preview_url|미리보기 주소|String|
-|**qnaReply**|**답변 순번 목록**| |
+|**qnaReply**|**채택된 답변**| |
 |reply_idx|답변 순번|int|
 |content_reply|답변 내용|String|
 |job_dt|답변 작성 일시|String|
