@@ -94,6 +94,7 @@ function getDataQnaListAll(){
 |model_com|모델제조사|String|
 |model_create_dt|제조일자|String|
 |model_install_dt|설치일자|String|
+|mold_break_yn|금형파손여부|int|
 |broken_sh_name|고장상황|String|
 |broken_hs_name|고장현상|String|
 |title|제목|String|
@@ -714,6 +715,7 @@ function getDataHelpOne(){
 |model_com|모델제조사|String|
 |model_create_dt|제조일자|String|
 |model_install_dt|설치일자|String|
+|mold_break_yn|금형파손여부|int|
 |broken_sh_name|고장상황|String|
 |broken_hs_name|고장현상|String|
 |title|제목|String|
@@ -739,7 +741,6 @@ function getDataHelpOne(){
 |reply_preview_url|미리보기 주소|String|
 |message|결과 안내문|String|
 |result|결과 코드|int |
-|reply_preview_url|미리보기 주소|String|
 
 &nbsp; &nbsp;
 ### Jquery 코드 샘플
@@ -747,12 +748,12 @@ function getDataHelpOne(){
 function getDataQnaReport(){
     var search ={
         user_token:"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.
-eyJ1c2Vybm8iOjg1LCJ1c2VyaWQiOiJkbXRlazEwNiIsImlhdCI6MTY3MDk4MjY0MSwiZXhwIjoxNjc4NzU4NjQxfQ.
-iWSLtvLgUFAw8ODaDDURcILvOqJEYnx5kjOd6AZhTg8",
+        eyJ1c2Vybm8iOjg1LCJ1c2VyaWQiOiJkbXRlazEwNiIsImlhdCI6MTY3MDk4MjY0MSwiZXhwIjoxNjc4NzU4NjQxfQ.
+        iWSLtvLgUFAw8ODaDDURcILvOqJEYnx5kjOd6AZhTg8",
         qna_idx: 93
     }
     $.ajax({
-        url: "http://localhost:8080/project9/getDataQnaReport",
+        url: "https://{domain}/project9/getDataQnaReport",
         type: "GET",
         async: false,
         crossDomain: true,
